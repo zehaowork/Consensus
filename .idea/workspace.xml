@@ -23,7 +23,11 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5dfcc6c-d76b-4fdf-a5ec-50c8773760e1" name="Default Changelist" comment="" />
+    <list default="true" id="c5dfcc6c-d76b-4fdf-a5ec-50c8773760e1" name="Default Changelist" comment="first round working">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Participant.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +40,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Participant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="171" column="23" selection-start-line="171" selection-start-column="23" selection-end-line="171" selection-end-column="23" />
+            <state relative-caret-position="149">
+              <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="241" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Participant#0;class#Participant#0" />
                 <element signature="method#main#0;class#Participant#0" />
                 <element signature="method#startServer#0;class#Participant#0" />
-                <element signature="method#ServerThread#0;class#ServerThread#0;class#Participant#0" />
-                <element signature="class#CoordinateThread#0;class#Participant#0" />
-                <element signature="e#3332#4776#0" />
                 <element signature="method#storeInfo#0;class#Participant#0" />
+                <element signature="method#Vote#0;class#Participant#0" />
                 <element signature="method#randomVote#0;class#Participant#0" />
                 <element signature="method#setRoundCounter#0;class#Participant#0" />
               </folding>
@@ -57,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Coordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="-145">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#VOTE_OPTIONS#0;class#Coordinator#0" />
@@ -87,10 +89,16 @@
       <find>SYSTEM</find>
       <find>this is</find>
       <find>system.out.pri</find>
-      <find>waitingfor</find>
       <find>sendvo</find>
       <find>error</find>
+      <find>othervote</find>
+      <find>waitingfor</find>
+      <find>sendvote</find>
+      <find>system.out.println</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,6 +115,7 @@
     <option name="width" value="1440" />
     <option name="height" value="773" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -146,7 +155,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557948146649" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557949653592" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -255,12 +264,12 @@
       <workItem from="1557677518257" duration="889000" />
       <workItem from="1557703861055" duration="293000" />
       <workItem from="1557747006244" duration="3591000" />
-      <workItem from="1557930953304" duration="13672000" />
+      <workItem from="1557930953304" duration="15111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99109000" />
+    <option name="totallyTimeSpent" value="100548000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,7 +304,7 @@
       <window_info anchor="bottom" id="TeamCity" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32892805" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32946298" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3274596" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32599118" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -342,6 +351,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first round working" />
+    <option name="LAST_COMMIT_MESSAGE" value="first round working" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ServerThread.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ref/Reference.java">
@@ -366,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Coordinator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="-145">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#VOTE_OPTIONS#0;class#Coordinator#0" />
@@ -377,17 +390,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Participant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="171" column="23" selection-start-line="171" selection-start-column="23" selection-end-line="171" selection-end-column="23" />
+        <state relative-caret-position="149">
+          <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="241" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Participant#0;class#Participant#0" />
             <element signature="method#main#0;class#Participant#0" />
             <element signature="method#startServer#0;class#Participant#0" />
-            <element signature="method#ServerThread#0;class#ServerThread#0;class#Participant#0" />
-            <element signature="class#CoordinateThread#0;class#Participant#0" />
-            <element signature="e#3332#4776#0" />
             <element signature="method#storeInfo#0;class#Participant#0" />
+            <element signature="method#Vote#0;class#Participant#0" />
             <element signature="method#randomVote#0;class#Participant#0" />
             <element signature="method#setRoundCounter#0;class#Participant#0" />
           </folding>

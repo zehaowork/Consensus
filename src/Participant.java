@@ -94,13 +94,19 @@ public class Participant {
 
         @Override
         public void run() {
-            while (true){
-                Token
-                while ((token instanceof ExitToken)){
-                    System.out.println("wait for commit");
-                    token = reqTokenizer.getToken(clientIn.readUTF());
-                    System.out.println(token._req);
+            try{
+                while (true){
+
+                    ReqTokenizer reqTokenizer = new ReqTokenizer();
+                    Token token = reqTokenizer.getToken(clientIn.readUTF());;
+                    while ((token instanceof )){
+
+                    }
                 }
+            }
+            catch (Exception e){
+
+
             }
         }
 
