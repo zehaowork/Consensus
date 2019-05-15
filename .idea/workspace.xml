@@ -23,8 +23,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5dfcc6c-d76b-4fdf-a5ec-50c8773760e1" name="Default Changelist" comment="first round working">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f2e2ff70-6ba4-40cd-9bd3-4bd2560fa682" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Participant.java" afterDir="false" />
     </list>
@@ -36,21 +35,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Participant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="241" selection-end-column="15" />
+            <state relative-caret-position="299">
+              <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#Participant#0;class#Participant#0" />
-                <element signature="method#main#0;class#Participant#0" />
-                <element signature="method#startServer#0;class#Participant#0" />
+                <element signature="method#run#0;class#CoordinateThread#0;class#Participant#0" />
                 <element signature="method#storeInfo#0;class#Participant#0" />
                 <element signature="method#Vote#0;class#Participant#0" />
-                <element signature="method#randomVote#0;class#Participant#0" />
-                <element signature="method#setRoundCounter#0;class#Participant#0" />
+                <element signature="method#sendVote#0;class#Participant#0" />
+                <element signature="e#8153#8459#1" />
+                <element signature="e#8669#8754#1" />
               </folding>
             </state>
           </provider>
@@ -59,10 +57,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Coordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-145">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="63" />
+            <state relative-caret-position="1694">
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#yell#0;class#Coordinator#0" />
                 <element signature="method#VOTE_OPTIONS#0;class#Coordinator#0" />
               </folding>
             </state>
@@ -71,30 +70,10 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start</find>
-      <find>running</find>
-      <find>welcome</find>
-      <find>connection</find>
-      <find>storeinfo</find>
-      <find>cannot</find>
-      <find>SYSTEM</find>
-      <find>this is</find>
-      <find>system.out.pri</find>
-      <find>sendvo</find>
-      <find>error</find>
-      <find>othervote</find>
-      <find>waitingfor</find>
-      <find>sendvote</find>
-      <find>system.out.println</find>
+      <find>other</find>
+      <find>send</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,9 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ServerThread.java" />
-        <option value="$PROJECT_DIR$/src/ReqTokenizer.java" />
-        <option value="$PROJECT_DIR$/src/Coordinator.java" />
         <option value="$PROJECT_DIR$/src/Participant.java" />
       </list>
     </option>
@@ -122,6 +98,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,33 +111,16 @@
               <item name="Consensus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Consensus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Consensus" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ReqTokenizer.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557949769136" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557952638741" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -175,47 +135,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Coordinator">
-    <configuration name="Coordinator" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Coordinator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Coordinator" />
       <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 3 A B C" />
+      <option name="PROGRAM_PARAMETERS" value="12345 2 A B" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Participant 2" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="Participant" />
-      <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 12347 5000 0" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Participant 3" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="Participant" />
-      <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 12348 5000 0" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Participant 4" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="Participant" />
-      <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 12349 5000 0" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Participant 5" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="Participant" />
-      <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 22346 5000 0" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Participant" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="Participant 1 (1)" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="Participant" />
       <module name="Consensus" />
       <option name="PROGRAM_PARAMETERS" value="12345 12346 5000 0" />
@@ -223,25 +151,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Participant" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Participant 1 (2)" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="Participant" />
       <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 4 A B" />
+      <option name="PROGRAM_PARAMETERS" value="12345 12347 5000 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Participant 1 (3)" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="Participant" />
+      <module name="Consensus" />
+      <option name="PROGRAM_PARAMETERS" value="12345 12348 5000 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Participant 1 (4)" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="Participant" />
+      <module name="Consensus" />
+      <option name="PROGRAM_PARAMETERS" value="12345 12349 5000 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Participant 1 (5)" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="Participant" />
+      <module name="Consensus" />
+      <option name="PROGRAM_PARAMETERS" value="12345 22346 5000 0" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Participant 2" />
+      <item itemvalue="Application.Participant 1 (1)" />
       <item itemvalue="Application.Coordinator" />
-      <item itemvalue="Application.Participant 3" />
-      <item itemvalue="Application.Participant 4" />
-      <item itemvalue="Application.Participant 5" />
-      <item itemvalue="Application.Participant" />
+      <item itemvalue="Application.Participant 1 (2)" />
+      <item itemvalue="Application.Participant 1 (3)" />
+      <item itemvalue="Application.Participant 1 (4)" />
+      <item itemvalue="Application.Participant 1 (5)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Participant" />
+        <item itemvalue="Application.Coordinator" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +202,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c5dfcc6c-d76b-4fdf-a5ec-50c8773760e1" name="Default Changelist" comment="" />
+      <changelist id="f2e2ff70-6ba4-40cd-9bd3-4bd2560fa682" name="Default Changelist" comment="" />
       <created>1556734191575</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -264,28 +216,41 @@
       <workItem from="1557677518257" duration="889000" />
       <workItem from="1557703861055" duration="293000" />
       <workItem from="1557747006244" duration="3591000" />
-      <workItem from="1557930953304" duration="15111000" />
+      <workItem from="1557930953304" duration="15480000" />
+      <workItem from="1557950094940" duration="2296000" />
+    </task>
+    <task id="LOCAL-00001" summary="first round broken">
+      <created>1557949722507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557949722508</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first round broken">
+      <created>1557949767992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557949767992</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first round broken">
+      <created>1557949789228</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557949789228</updated>
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100548000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="2433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.1981402" />
-      <window_info id="Structure" order="1" sideWeight="0.5021645" side_tool="true" weight="0.1981402" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.20100144" />
+      <window_info id="Structure" order="1" sideWeight="0.5021645" side_tool="true" weight="0.20100144" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -353,7 +318,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first round working" />
-    <option name="LAST_COMMIT_MESSAGE" value="first round working" />
+    <MESSAGE value="first round broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="first round broken" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ServerThread.java" />
@@ -379,10 +345,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Coordinator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="63" />
+        <state relative-caret-position="1694">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#yell#0;class#Coordinator#0" />
             <element signature="method#VOTE_OPTIONS#0;class#Coordinator#0" />
           </folding>
         </state>
@@ -390,70 +357,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Participant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="241" selection-end-column="15" />
+        <state relative-caret-position="299">
+          <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Participant#0;class#Participant#0" />
-            <element signature="method#main#0;class#Participant#0" />
-            <element signature="method#startServer#0;class#Participant#0" />
+            <element signature="method#run#0;class#CoordinateThread#0;class#Participant#0" />
             <element signature="method#storeInfo#0;class#Participant#0" />
             <element signature="method#Vote#0;class#Participant#0" />
-            <element signature="method#randomVote#0;class#Participant#0" />
-            <element signature="method#setRoundCounter#0;class#Participant#0" />
+            <element signature="method#sendVote#0;class#Participant#0" />
+            <element signature="e#8153#8459#1" />
+            <element signature="e#8669#8754#1" />
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

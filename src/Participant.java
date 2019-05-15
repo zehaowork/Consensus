@@ -21,8 +21,7 @@ public class Participant {
     private Integer numConnected=0;
     private String myVote ="";
     private Integer roundCounter = 0;
-    private ArrayList<VoteToken> oddVote = new ArrayList<>();
-    private ArrayList<VoteToken> evenVote = new ArrayList<>();
+    private ArrayList<VoteToken> otherVote = new ArrayList<>();
     private CoordinateThread coordinateThread;
     private ServerSocket serverSocket;
     private Boolean commitReady=false;
@@ -98,8 +97,11 @@ public class Participant {
                 while (true){
 
                     ReqTokenizer reqTokenizer = new ReqTokenizer();
-                    Token token = reqTokenizer.getToken(clientIn.readUTF());;
-                    while ((token instanceof )){
+                    Token token = reqTokenizer.getToken(clientIn.readUTF());
+                    System.out.println(token._req);
+                    if (token instanceof VoteToken){
+                        otherVote.add((VoteToken) token);
+                        clientSocket.close();
 
                     }
                 }
@@ -135,7 +137,6 @@ public class Participant {
                     }
 
                     if (globalOptions!= null && globalPorts != null){
-                        randomVote();
                         startServer();
                     }
                     if(commitReady==true){
@@ -181,32 +182,20 @@ public class Participant {
     }
 
    String Vote(){
-       String voteMsg ="VOTE";
-        if (roundCounter == 0 && myVote!=null){
-            voteMsg = voteMsg+ " "+ myport+" "+myVote;
-        }
-        else if (roundCounter %2 == 0){
-            for (VoteToken voteToken: evenVote){
-                String[] strings = voteToken.info.split(" ");
-                voteMsg = voteMsg+" "+strings[0]+" "+strings[1];
-            }
-        }
-        else {
-            for (VoteToken voteToken: oddVote){
-                String[] strings = voteToken.info.split(" ");
-                voteMsg = voteMsg+" "+strings[0]+" "+strings[1];
-            }
-        }
-        return voteMsg;
+       while (true){
+           if (myVote!=null){
+               String voteMsg ="VOTE " + myport+ " "+myVote;
+               return voteMsg;
+           }
+       }
     }
     void sendVote(){
+
         while (true){
             if (globalPorts!=null && globalOptions!=null){
+                randomVote();
                 for (int x = 1;x<globalPorts.length;x++){
                     try {
-                        if (failCond == 1 &&  x ==2){
-                            System.exit(0);
-                        }
                         if (!globalPorts[x].equals(this.myport.toString())){
                             System.out.println(globalPorts[x]);
                             Socket socket = new Socket("localhost",Integer.parseInt(globalPorts[x]));
@@ -220,7 +209,6 @@ public class Participant {
                         System.err.println("Cannot Vote");
                     }
                 }
-                setRoundCounter();
                 break;
             }
             else {
@@ -235,31 +223,26 @@ public class Participant {
     }
 
     void isReadyToCommit(){
-        long start = System.currentTimeMillis();
-        long end = start+timeOut;
+//        long start = System.currentTimeMillis();
+//        long end = start+timeOut;
         while (true){
-            System.out.println(oddVote);
-            if (evenVote.size() == globalPorts.length-2 || oddVote.size() == globalPorts.length-2){
+            if (otherVote.size() == globalPorts.length-2){
                 commitReady = true;
                 break;
             }
+//            else{
+//
+//            }
         }
     }
 
     String decideOutcome(){
         Integer numMax = 0;
         String voteresult="";
-        ArrayList<VoteToken> voteTokens = new ArrayList<>();
-        if (oddVote.size()>evenVote.size()){
-            voteTokens = oddVote;
-        }
-        else {
-            voteTokens = evenVote;
-        }
 
         HashMap<String,Integer> voteCounter = new HashMap<>();
         voteCounter.put(myVote,1);
-        for (VoteToken voteToken: voteTokens){
+        for (VoteToken voteToken: otherVote){
            String [] tokenString = voteToken.info.split(" ");
            if (voteCounter.containsKey(tokenString[2])){
                voteCounter.put(tokenString[2],voteCounter.get(tokenString[2])+1);
@@ -286,15 +269,11 @@ public class Participant {
 
     }
 
-   synchronized void randomVote(){
+    void randomVote(){
+            Random random = new Random();
+            Integer randIndex = random.nextInt((globalOptions.length-2)+1)+1;
 
-        Random random = new Random();
-        Integer randIndex = random.nextInt((globalOptions.length-2)+1)+1;
-        myVote = globalOptions[randIndex];
+            myVote = globalOptions[randIndex];
     }
 
-    synchronized void setRoundCounter(){
-        roundCounter =roundCounter +1;
-
-    }
 }
