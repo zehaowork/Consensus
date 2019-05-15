@@ -25,6 +25,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f2e2ff70-6ba4-40cd-9bd3-4bd2560fa682" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Consensus/Participant$CoordinateThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Consensus/Participant$CoordinateThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Consensus/Participant$ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Consensus/Participant$ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Consensus/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Consensus/Participant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Participant.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,14 +42,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Participant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+            <state relative-caret-position="95">
+              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#run#0;class#CoordinateThread#0;class#Participant#0" />
+                <element signature="method#Participant#0;class#Participant#0" />
+                <element signature="method#startServer#0;class#Participant#0" />
+                <element signature="method#ServerThread#0;class#ServerThread#0;class#Participant#0" />
+                <element signature="e#2794#3076#0" />
                 <element signature="method#storeInfo#0;class#Participant#0" />
                 <element signature="method#Vote#0;class#Participant#0" />
-                <element signature="method#sendVote#0;class#Participant#0" />
+                <element signature="method#decideOutcome#0;class#Participant#0" />
                 <element signature="e#8153#8459#1" />
                 <element signature="e#8669#8754#1" />
               </folding>
@@ -74,6 +80,8 @@
     <findStrings>
       <find>other</find>
       <find>send</find>
+      <find>numcon</find>
+      <find>system.out.prin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,7 +128,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557952638741" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557954365250" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,7 +146,7 @@
     <configuration name="Coordinator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Coordinator" />
       <module name="Consensus" />
-      <option name="PROGRAM_PARAMETERS" value="12345 2 A B" />
+      <option name="PROGRAM_PARAMETERS" value="12345 3 A B" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,14 +225,14 @@
       <workItem from="1557703861055" duration="293000" />
       <workItem from="1557747006244" duration="3591000" />
       <workItem from="1557930953304" duration="15480000" />
-      <workItem from="1557950094940" duration="2296000" />
+      <workItem from="1557950094940" duration="4504000" />
     </task>
-    <task id="LOCAL-00001" summary="first round broken">
-      <created>1557949722507</created>
+    <task id="LOCAL-00001" summary="first round working now">
+      <created>1557952656367</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1557949722508</updated>
+      <updated>1557952656367</updated>
     </task>
     <task id="LOCAL-00002" summary="first round broken">
       <created>1557949767992</created>
@@ -240,17 +248,17 @@
       <option name="project" value="LOCAL" />
       <updated>1557949789228</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2433000" />
+    <option name="totallyTimeSpent" value="4641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="773" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.20100144" />
-      <window_info id="Structure" order="1" sideWeight="0.5021645" side_tool="true" weight="0.20100144" />
+      <window_info id="Structure" order="1" sideWeight="0.5021645" side_tool="true" visible="true" weight="0.20100144" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -319,7 +327,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first round working" />
     <MESSAGE value="first round broken" />
-    <option name="LAST_COMMIT_MESSAGE" value="first round broken" />
+    <MESSAGE value="first round working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="first round working now" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ServerThread.java" />
@@ -357,14 +366,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Participant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+        <state relative-caret-position="95">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#run#0;class#CoordinateThread#0;class#Participant#0" />
+            <element signature="method#Participant#0;class#Participant#0" />
+            <element signature="method#startServer#0;class#Participant#0" />
+            <element signature="method#ServerThread#0;class#ServerThread#0;class#Participant#0" />
+            <element signature="e#2794#3076#0" />
             <element signature="method#storeInfo#0;class#Participant#0" />
             <element signature="method#Vote#0;class#Participant#0" />
-            <element signature="method#sendVote#0;class#Participant#0" />
+            <element signature="method#decideOutcome#0;class#Participant#0" />
             <element signature="e#8153#8459#1" />
             <element signature="e#8669#8754#1" />
           </folding>

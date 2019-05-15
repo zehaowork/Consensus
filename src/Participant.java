@@ -56,7 +56,9 @@ public class Participant {
         Participant participant = new Participant(coord,part,timeOut,failCond);
         participant.coordinateThread.start();
         participant.sendVote();
+        participant.sendVote();
         participant.isReadyToCommit();
+
     }
 
     void startServer(){
@@ -101,8 +103,6 @@ public class Participant {
                     System.out.println(token._req);
                     if (token instanceof VoteToken){
                         otherVote.add((VoteToken) token);
-                        clientSocket.close();
-
                     }
                 }
             }
@@ -120,6 +120,7 @@ public class Participant {
         @Override
         public void run() {
             try {
+                System.out.println("trace 2");
                Socket socket = new Socket("localhost",cport);
                DataOutputStream dout = new DataOutputStream(socket.getOutputStream());
                DataInputStream din = new DataInputStream(socket.getInputStream());
@@ -140,7 +141,7 @@ public class Participant {
                         startServer();
                     }
                     if(commitReady==true){
-
+                        System.out.println("trace 1");
                         msgout = decideOutcome();
                         if (msgout==null){
                             System.out.println("Commit");
@@ -230,9 +231,16 @@ public class Participant {
                 commitReady = true;
                 break;
             }
-//            else{
-//
-//            }
+            else {
+
+                try {
+                    Thread.sleep(10);
+                }
+                catch (Exception e){
+
+                }
+            }
+
         }
     }
 
